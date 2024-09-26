@@ -25,6 +25,7 @@
             echo "Nama : " . $mahasiswa->getNama () . "<Br>";
             echo "Tgl Lahir : " . $mahasiswa->getTglLahir () . "<Br>";
             echo "Alamat : " . $mahasiswa->getAlamat () . "<Br>";
+            
             //memanggil method
             $mahasiswa->ucapkanSalam();
             
