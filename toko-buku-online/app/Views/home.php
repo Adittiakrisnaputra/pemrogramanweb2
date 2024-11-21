@@ -1,13 +1,7 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Toko Buku Online</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="container">
+ <?= $this->extend('Layout'); ?>  
+
+ <?= $this->section('main')?>
+   <div class="container">
         <div class="row bg-primary-subtle">
             <div class="col-6 p-5">
                 <h1>Selamat Datang Di Toko Buku Online</h1>
@@ -16,13 +10,13 @@
                 
             </div>
             <div class="col-6 p-5">
-                <form action="">
+                <form action="<?= base_url('search')?>" method="GET">
                 <h1>Temukan Buku Favorit</h1>
                     <div class="mb-3">
-                        <input type="text" name="judul" id="judul" class="from-control" placeholder="Judul Buku">
+                        <input type="text" name="judul" id="judul" class="form-control" placeholder="Judul Buku">
                     </div>
                     <div class="mb-3">
-                        <select name="Kategori" id="Kategori" class ="from-control">
+                        <select name="Kategori" id="Kategori" class ="form-control">
                             <option value="">--Pilih Kategori</option>
                         </select>
                     </div>
@@ -30,7 +24,7 @@
                         <input type="text" name="pengarang" id="pengarang" placeholder="pengarang" class="form-control">
                     </div>
                     <div class="mb-3">
-                        <button class="btn btn-primary"></button>
+                        <button class="btn btn-primary">Cari</button>
                     </div>
                 </form>
             </div>
@@ -64,7 +58,7 @@
                         <img src="<?= base_url()?>/image/3.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Rp. 78.000</p>
+                            <p class="card-text">Rp. 80.000</p>
                             <a href="#" class="btn btn-primary">Add yo Chart</a>
                         </div>
                         </div>
@@ -74,7 +68,7 @@
                         <img src="<?= base_url()?>/image/4.webp" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Rp. 78.000</p>
+                            <p class="card-text">Rp. 60.000</p>
                             <a href="#" class="btn btn-primary">Add yo Chart</a>
                         </div>
                         </div>
@@ -103,9 +97,4 @@
             </div>
         </div>
     </div>
-    <footer class="p-5 bg-danger-subtle mt-5 text-center">
-        &copy; 2024. Kelas A Pemrograman Web 2. ALL rights reserved
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-</html>
+<?=$this->endSection(); ?> 
