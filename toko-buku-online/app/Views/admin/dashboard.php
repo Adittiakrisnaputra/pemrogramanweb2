@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -75,13 +76,14 @@
         </button>
       </div>
     </nav>
-
+   
     <!-- Sidebar -->
+    <?= $this->renderSection('content'); ?>
     <div id="sidebar">
-      <a href="#">Dashboard</a>
-      <a href="#">Data Buku</a>
-      <a href="#">Transaksi</a>
-      <a href="#">Pelanggan</a>
+      <a href="<?= base_url('admin/dashbord')?>">Dashboard</a>
+      <a href="<?= base_url('admin/databuku')?>">Data Buku</a>
+      <a href="<?= base_url('admin/transaksi')?>">Transaksi</a>
+      <a href="<?= base_url('admin/pelanggan')?>">Pelanggan</a>
     </div>
 
     <!-- Main Content -->

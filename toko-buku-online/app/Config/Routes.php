@@ -9,7 +9,16 @@ $routes->get('/', 'Home::index');
 $routes->get('Chart', 'Home::Chart');
 $routes->get('checkout', 'Home::checkout');
 $routes->get('search', 'Home::search');
-$routes->get('admin/dashboard', 'Home::dashboard');
+$routes->post('submit', 'Home::submit');
 
 service('auth')->routes($routes);
-$routes->post('submit', 'Home::submit');
+
+//Admin
+$routes->group('admin', ['filter' => 'group:admin'], function ($routes){
+
+    $routes->get('dashboard', 'AdminController::dashboard');
+    $routes->get('databuku' , 'AdminController::databuku');
+    $routes->get('pelanggan', 'AdminController::pelanggan');
+    $routes->get('transaksi', 'AdminController::transaksi');
+   
+});
